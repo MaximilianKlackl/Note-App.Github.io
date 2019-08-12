@@ -1,18 +1,3 @@
-//***SAVING NOTES IN LOCAL STORAGE***
-
-// function save()
-// fcuntion loadNotes()
-// function delete()
-
-// transfer local storage into /list to work
-// in deleteNote() param for created key to delete right one
-
-//save()
-//  key!
-
-//delete()
-//  identify which key to delete
-
 var btn = document.getElementById("btn");
 var textarea = document.getElementById("textarea");
 var select = document.getElementById("color");
