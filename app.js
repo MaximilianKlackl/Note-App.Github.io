@@ -1,7 +1,12 @@
 var btn = document.getElementById("btn");
 var textarea = document.getElementById("textarea");
+var select = document.getElementById("color");
 
 btn.addEventListener("click", createNote);
+
+//change styling on option
+changeStyling();
+select.addEventListener("change", changeStyling);
 
 function createNote()
 {
@@ -30,6 +35,8 @@ function createNote()
 
         //event listener for delete button
         addListenerDeleteButton(deleteButton);
+
+        changeStyling();
     }
 }
 
@@ -48,3 +55,46 @@ function deleteNote(e)
     let note = e.target.parentNode;
     note.parentNode.removeChild(note);
 }
+
+function changeStyling()
+{
+  let selected = select.options[select.selectedIndex].value;
+  let notes = document.querySelectorAll(".note");
+  let red = "#F76262";
+  let blue ="#216583";
+  let green = "#32a852";
+  let yellow = "#ffd359";
+
+  if(selected == "red")
+  {
+    changeColor(notes, red);
+  }
+
+  if(selected == "blue")
+  {
+    changeColor(notes, blue);
+  }
+
+  if(selected == "green")
+  {
+    changeColor(notes, green);
+  }
+  if(selected == "yellow")
+  {
+    changeColor(notes, yellow);
+  }
+}
+
+
+//changes styling colors
+function changeColor(element, color)
+{
+  element.forEach(e => {
+      e.style.backgroundColor = color;
+  } )
+
+  textarea.style.border = color + " 2px solid";
+  btn.style.backgroundColor = color;
+  select.style.backgroundColor = color;
+}
+

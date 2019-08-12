@@ -10,27 +10,48 @@ body
 header
 {
     width: 100%;
-    height: 200px;
-    background-color: #f3f3f3;
+    height: 300px;
 }
 
 #textarea
 {
     width: 200px;
-    height: 100px;
-    margin-top: 20px;
-    margin-left: 20px;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-family: 'Open Sans', sans-serif;
+    resize: none;
+    background-color: white;
 }
 
-#button-container
+#container
 {
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 205px;
+}
+
+#color
+{
+    width: 95px;
+    height: 40px;
+    float: right;
+    border: none;
+    color: white;
 }
 
 #btn
 {
-    width: 90px;
+    width: 95px;
     height: 40px;
+    border: none;
+    color: white;
+}
+
+#notes-container
+{
+    min-height: 70vh;
+    width: 100%;
 }
 
 .note
@@ -39,10 +60,11 @@ header
     height: 180px;
     text-align: left;
     padding: 5px;
-    background-color: #fcba03;
+    background-color: #e2e2e2;
     margin: 20px;
     float: left;
-    box-shadow: -7px 13px 13px 0px rgba(148,148,148,1);
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.25);
+    color: rgb(255, 255, 255);
 }
 
 .note p
@@ -66,3 +88,20 @@ header
 {
     opacity: .5;
 }
+
+footer
+{
+    height: 200px;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+
+footer div
+{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 90px;
+}
+
