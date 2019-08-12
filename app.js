@@ -18,6 +18,8 @@ var textarea = document.getElementById("textarea");
 var select = document.getElementById("color");
 
 loadNotes();
+
+setDefaultStyling();
  
 btn.addEventListener("click", createNote);
 
@@ -25,6 +27,14 @@ btn.addEventListener("click", createNote);
 changeColor(localStorage.getItem("color"));
 select.addEventListener("change", changeStyling);
 displayRightSelect(select);
+
+function setDefaultStyling()
+{
+  if(localStorage.getItem("color") == null)
+  {
+  localStorage.setItem("color", "#F76262");
+  }
+}
 
 function loadNotes()
 { 
