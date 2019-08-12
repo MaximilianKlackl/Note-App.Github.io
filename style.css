@@ -24,6 +24,11 @@ header
     background-color: white;
 }
 
+#textarea::placeholder
+{
+    color: rgb(158, 158, 158);
+}
+
 #container
 {
     margin-left: 30px;
@@ -50,7 +55,7 @@ header
 
 #notes-container
 {
-    min-height: 70vh;
+    height: 70vh;
     width: 100%;
 }
 
