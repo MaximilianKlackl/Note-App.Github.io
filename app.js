@@ -1,19 +1,55 @@
 var btn = document.getElementById("btn");
 var textarea = document.getElementById("textarea");
 var select = document.getElementById("color");
+var btnBackground = document.getElementById("btn-background");
 
 loadNotes();
-
-setDefaultStyling();
+loadStyling();
+loadBackground();
  
 btn.addEventListener("click", createNote);
+btnBackground.addEventListener("click", changeBackground);
 
 //change styling on option
 changeColor(localStorage.getItem("color"));
 select.addEventListener("change", changeStyling);
 displayRightSelect(select);
 
-function setDefaultStyling()
+function loadBackground()
+{
+  if(localStorage.getItem("background") != null)
+  {
+    setBackground();
+  }
+  else
+  {
+    changeBackground();
+  }
+}
+
+function changeBackground()
+{
+  if(localStorage.getItem("background") >= 14)
+  {
+    localStorage.removeItem("background");
+    localStorage.setItem("background", 1);
+  }
+  else
+  {
+    let tempNum = localStorage.getItem("background");
+    localStorage.removeItem("background");
+    tempNum++;
+    localStorage.setItem("background", tempNum);
+  }
+  setBackground();
+}
+
+function setBackground()
+{
+  document.body.style.background = "url(Images/Wallpapers/background" + localStorage.getItem("background") + ".jpg";
+}
+
+function loadStyling()
 {
   if(localStorage.getItem("color") == null)
   {
@@ -24,7 +60,7 @@ function setDefaultStyling()
 function loadNotes()
 { 
   Object.keys(localStorage).forEach(function(key){
-    if(key != "color")
+    if(key != "color" && key != "background")
     {
       let containerDiv = document.getElementById("notes-container"); 
 
@@ -160,6 +196,7 @@ function changeColor(color)
   textarea.style.border = color + " 2px solid";
   btn.style.backgroundColor = color;
   select.style.backgroundColor = color;
+  btnBackground.style.backgroundColor = color;
 }
 
 function displayRightSelect(select)
