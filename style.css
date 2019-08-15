@@ -128,3 +128,78 @@ footer div
     top: 90px;
 }
 
+.dropbtn 
+{
+    background: url("Images/history-icon.svg");
+    color: white;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+  
+.dropbtn:hover, .dropbtn:focus
+{
+    opacity: .8;
+}
+  
+.dropdown 
+{
+    float: right;
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 260px;
+    height: 101vh;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+    top: 0;
+}
+  
+.dropdown-content > div
+{
+    color: rgb(121, 121, 121);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    word-wrap: break-word;
+}
+  
+#myDropdown div:hover {background-color: #ddd;}
+  
+.show {display: block;}
+
+#clearHistory
+{
+    border: 0; 
+    width: 300px;
+    height: 50px;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0px 3px 19px 0px rgba(125,125,125,1);
+}
+
+#clearHistory:hover
+{
+    opacity: .9;
+}
+
+.deleteButton-history
+{
+    background: url("Images/close-img.png");
+    background-size: cover;
+    width: 10px;
+    height: 10px;
+    float: right;
+}
