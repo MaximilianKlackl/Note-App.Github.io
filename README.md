@@ -5,8 +5,6 @@ Web Note App build in Javascript, CSS & HTML. Uses local storage to save data.
 
 [![alt text](https://github.com/MaximilianKlackl/NoteApp/blob/master/screenshot1_app.png)](https://maximilianklackl.github.io/NoteApp/)
 
-<i>Note: first time used Javascript ;)</i>
-
 <b>Technologies:</b>
 <ul>
   <li>Javascript</li>
