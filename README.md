@@ -24,7 +24,7 @@ Web Note App build in Javascript, CSS & HTML. Uses local storage to save data.
 <b>Features: </b>
 <ul>
   <li>change background button</li>
-  <li>change colors button</li>
+  <li>change color button</li>
   <li>view history and pull notes back</li>
 </ul>
 
