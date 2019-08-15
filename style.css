@@ -68,8 +68,9 @@ header
 
 #notes-container
 {
-    height: 70vh;
+    min-height: 70vh;
     width: 100%;
+    display: inline-block;
 }
 
 .note
@@ -117,6 +118,9 @@ footer
     height: 200px;
     width: 100%;
     background-color: #EEEEEE;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 footer div
